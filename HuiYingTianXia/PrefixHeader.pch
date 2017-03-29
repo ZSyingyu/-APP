@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  HuiYingTianXia
+//
+//  Created by tsmc on 15-3-17.
+//  Copyright (c) 2015年 tsmc. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+//#import "MBProgressHUD.h"
+//#import "Common.h"
+//#import "ZCStyleGuide.h"
+//#import "UIImageView+WebCache.h"
+//#import "NSString+Util.h"
+//#import "UIColor+Additions.h"
+//#import "ZCProtocols.h"
+
+#import "Common.h"
+#import "APPCommon.h"
+#import "APIUrl.h"
+#import "NetAPIManger.h"
+#import "UIColor+Additions.h"
+#import "NSObject+Common.h"
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#endif
+
+#ifdef DEBUG
+    #define DLog(fmt,...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__)
+#else
+    #define DLog(fmt,...)
+#endif

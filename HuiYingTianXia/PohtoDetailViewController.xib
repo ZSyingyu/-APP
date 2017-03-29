@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PohtoDetailViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-WW-KSr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <color key="backgroundColor" red="0.87058823529999996" green="0.31764705879999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Lhc-hh-pbJ"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.87058823529999996" green="0.31764705879999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="详情" id="Esi-kz-7Uu">
+                            <barButtonItem key="leftBarButtonItem" title="返回" id="gWn-RS-kRj">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="backItem:" destination="-1" id="P4g-Bd-gpO"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="拍照小提示：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0Q-Em-DKO">
+                    <rect key="frame" x="20" y="84" width="560" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="tXP-vV-VX7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.1019607843" green="0.41960784309999999" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxj-iJ-qqb">
+                    <rect key="frame" x="20" y="105" width="560" height="234"/>
+                    <string key="text">1、手持身份证，手指不能遮挡身份证上任何信息;
+
+2、身份证图像清楚，每一个字都要清晰可辨，利于识别;
+
+3、认证照片不是艺术照，不要过度化妆，这张照片需要本人面部五官与身份证
+
+照片进行对比;
+
+4、五官包括耳朵，如果有耳朵，不要让头发遮挡住;
+
+5、拍照时需要拍出持证手臂，以证实是本人手持;
+
+6、对正拍摄，不要有奇异角度，不要闪光灯拍摄，自然拍摄就可以。
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a0Q-Em-DKO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="0Sm-0N-TcH"/>
+                <constraint firstAttribute="trailing" secondItem="qxj-iJ-qqb" secondAttribute="trailing" constant="20" id="2bC-AU-rcy"/>
+                <constraint firstItem="qxj-iJ-qqb" firstAttribute="top" secondItem="a0Q-Em-DKO" secondAttribute="bottom" id="7FM-UL-K0u"/>
+                <constraint firstItem="lD3-WW-KSr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9pj-XZ-Nyb"/>
+                <constraint firstItem="a0Q-Em-DKO" firstAttribute="top" secondItem="lD3-WW-KSr" secondAttribute="bottom" constant="20" id="Gvr-Zu-wVd"/>
+                <constraint firstItem="lD3-WW-KSr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JQQ-bt-qAA"/>
+                <constraint firstAttribute="trailing" secondItem="a0Q-Em-DKO" secondAttribute="trailing" constant="20" id="Jy8-5F-6ZB"/>
+                <constraint firstItem="qxj-iJ-qqb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dRF-mn-B3i"/>
+                <constraint firstAttribute="trailing" secondItem="lD3-WW-KSr" secondAttribute="trailing" id="fZL-NJ-rt8"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
