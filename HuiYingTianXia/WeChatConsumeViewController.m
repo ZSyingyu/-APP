@@ -315,12 +315,12 @@
     items.n0 = @"0700";
     items.n1 = [[NSUserDefaults standardUserDefaults] objectForKey:Account];
     if ([self.clickButtonStatus isEqualToString:@"微信"]) {
-        items.n3 = @"190100";
+        items.n3 = @"190101";
     } else if ([self.clickButtonStatus isEqualToString:@"支付宝"]) {
         items.n3 = @"190099";
     }
     items.n4 = [POSManger transformAmountFormatWithStr:self.labNumber.text];
-    items.n44 = @"收款";//暂时写死,后续需要讨论
+    items.n44 = [@"收款" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];//暂时写死,后续需要讨论
     NSString *macStr = [NSString stringWithFormat:@"%@%@%@%@%@%@%@",items.n0,items.n1,items.n3,items.n4,items.n44,items.n59,MainKey];
     NSLog(@"macStr:%@",macStr);
     items.n64 = [[macStr md5HexDigest] uppercaseString];
