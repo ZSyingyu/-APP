@@ -142,7 +142,15 @@
             }
             
             if ([str containsString:@"F"]) {
-                feetStr = [str stringByReplacingOccurrencesOfString:@"F" withString:@"."];
+                NSRange range = [str rangeOfString:@"F"];
+                if (range.location != NSNotFound) {
+                    NSRange range1 = NSMakeRange(range.location + 1, 1);
+                    if ([[str substringWithRange:range1] isEqualToString:@"F"]) {
+                        str = [NSString stringWithFormat:@"%@%@",[str substringToIndex:range.location],[str substringFromIndex:range1.location]];
+                    }
+                    
+                    feetStr = [str stringByReplacingOccurrencesOfString:@"F" withString:@"."];
+                }
             }else {
                 feetStr = str;
             }
